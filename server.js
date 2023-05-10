@@ -19,7 +19,7 @@ async function read(url) {
 const server = http.createServer(async (req, res) => {
   res.setHeader("Content-Type", "text/html");
 
-  let path = "./views/";
+  let path = "./html/";
   switch (req.url) {
     case "/":
       path += "index.html";
