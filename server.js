@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs/promises");
+const _ = require("lodash");
 
 const hostname = "localhost";
 const port = 8080;
@@ -17,8 +18,8 @@ async function read(url) {
 
 const server = http.createServer(async (req, res) => {
   res.setHeader("Content-Type", "text/html");
-  let path = "./views/";
 
+  let path = "./views/";
   switch (req.url) {
     case "/":
       path += "index.html";
