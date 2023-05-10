@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<%- include('./partials/head.ejs', {titulo: titulo}) %>
+
+<body>
+
+  <%- include('./partials/nav.ejs') %>
+
+  <main>
+    <h1>Seus posts:</h1>
+    <a href="/blogs/novo">Novo post</a>
+    <div class="blogs content">
+      <% if (blogs.length>0) { %>
+      <% blogs.forEach(blog=> { %>
+      <div class="blog">
+        <h2 class="titulo">
+          <%=blog.title%>
+        </h2>
+        <p class="resumo">
+          <%=blog.snippet%>
+        </p>
+        <a href="/blogs/<%=blog._id%>">Ler mais...</a>
+      </div>
+      <% }) %>
+
+      <% } else { %>
+      <p>Você ainda não tem nenhum post.</p>
+      <% } %>
+    </div>
+  </main>
+
+  <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

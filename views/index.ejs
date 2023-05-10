@@ -1,29 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="../assets/style.css">
-  <title>Home</title>
-</head>
+<%- include('./partials/head.ejs', {titulo: titulo}) %>
 
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="/">Início</a></li>
-      <li><a href="sobre">Sobre</a></li>
-      <li><a href="contato" class="active">Contato</a></li>
-    </ul>
-  </nav>
+  <%- include('./partials/nav.ejs') %>
 
   <main>
     <h1>Bem-vindo</h1>
     <p>Este é um projeto de teste para aprender a usar o Node.js.</p>
     <p>É o meu primeiro!</p>
   </main>
+
+  <%- include('./partials/footer.ejs') %>
 
 </body>
 
