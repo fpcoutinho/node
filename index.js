@@ -17,18 +17,28 @@ async function read(url) {
 
 const server = http.createServer(async (req, res) => {
   res.setHeader("Content-Type", "text/html");
+  let path = "./views/";
 
-  let data = await read("./404.html");
-  res.statusCode = 200;
-  if (req.url === "/") {
-    data = await read("./index.html");
-  } else if (req.url === "/sobre") {
-    data = await read("./about.html");
-  } else if (req.url === "/contato") {
-    data = await read("./contact-me.html");
-  } else {
-    res.statusCode = 404;
+  switch (req.url) {
+    case "/":
+      path += "index.html";
+      res.statusCode = 200;
+      break;
+    case "/sobre":
+      path += "about.html";
+      res.statusCode = 200;
+      break;
+    case "/contato":
+      path += "contact-me.html";
+      res.statusCode = 200;
+      break;
+    default:
+      path += "404.html";
+      res.statusCode = 404;
+      break;
   }
+
+  const data = await read(path);
   res.end(data);
 });
 
