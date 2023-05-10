@@ -35,7 +35,7 @@ app.get("/blogs", (req, res) => {
   ];
   res.render("blogs", { titulo: "Blogs", blogs });
 });
-app.get("/blogs/novo", (req, res) => {
+app.get("/novo", (req, res) => {
   res.render("create", { titulo: "Criar novo Post" });
 });
 app.use((req, res) => {
