@@ -17,6 +17,9 @@
           <h2 class="titulo">
             <%=blog.title%>
           </h2>
+          <p class="data">
+            <%=blog.createdAt.toLocaleDateString("pt-BR", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })%>
+          </p>
           <p class="resumo">
             <%=blog.snippet%>
           </p>
