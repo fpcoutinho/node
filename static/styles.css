@@ -189,7 +189,8 @@ textarea {
   height: 120px;
 }
 
-.create-blog button {
+.create-blog button,
+.delete {
   margin-top: 20px;
   background: blueviolet;
   color: white;
@@ -199,6 +200,21 @@ textarea {
   cursor: pointer;
 }
 
-.create-blog button:hover {
+.create-blog button:hover,
+.delete:hover {
   background: #964dda;
+}
+
+/* details styles */
+.details {
+  position: relative;
+}
+.delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.delete:hover {
+  cursor: pointer;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
