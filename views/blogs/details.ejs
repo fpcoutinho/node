@@ -10,10 +10,17 @@
   <main>
     <div class="details">
       <h1><%=blog.title%></h1>
+      <p class="snippet">
+        <%=blog.snippet%>
+      </p>
       <p class="body">
         <%=blog.body%>
       </p>
-      <a class="delete" data-doc="<%= blog._id%>">Apagar</a>
+      <a class="delete">
+        <span class="material-symbols-outlined" data-doc="<%= blog._id%>">
+          delete_forever
+        </span>
+      </a>
     </div>
   </main>
 

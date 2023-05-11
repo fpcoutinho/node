@@ -18,7 +18,7 @@ const blog_details = (req, res) => {
       res.render("blogs/details", { titulo: "Detalhes", blog: result });
     })
     .catch((err) => {
-      console.log(err);
+      res.status(404).render("404", { titulo: "Blog não encontrado" });
     });
 };
 
@@ -40,6 +40,7 @@ const blog_create_post = (req, res) => {
 
 const blog_delete = (req, res) => {
   const id = req.params.id;
+  console.log(id);
   Blog.findByIdAndDelete(id)
     .then((result) => {
       res.json({ redirect: "/blogs" });
