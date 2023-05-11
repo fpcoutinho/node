@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<%- include('./partials/head.ejs', {titulo: titulo}) %>
+
+<body>
+
+  <%- include('./partials/nav.ejs') %>
+
+  <main>
+    <h1>
+      <%=titulo%>
+    </h1>
+    <p>Você pode me encontrar nas redes sociais abaixo:</p>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/filipepcoutinho/">LinkedIn</a></li>
+      <li><a href="https://github.com/fpcoutinho">GitHub</a></li>
+      <li>Ou me mande um e-mail em: <a
+          href="https://mail.google.com/mail/?view=cm&source=mailto&to=[fpcoutinho5@gmail.com]">fpcoutinho5@gmail.com</a>!
+      </li>
+    </ul>
+  </main>
+
+  <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>
